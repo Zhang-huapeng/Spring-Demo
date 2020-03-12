@@ -1,1 +1,20 @@
+# 表示使用哪个配置文件  匹配格式：application-***.yml
+# 只会加载 default 和选中的配置文件
+spring:
+  profiles:
+    active: sit
+
+# 暴露全部端点 '*'
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+# 在 http://localhost:8080/actuator/env 中可以看到配置信息
+info:
+  author:
+    name: Yu Xuanji
+    year: 2020
+
 
